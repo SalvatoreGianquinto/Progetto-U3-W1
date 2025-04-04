@@ -12,7 +12,7 @@ class MovieGallery extends Component {
   galleryRef = React.createRef() // Riferimento al contenitore della galleria
 
   componentDidMount() {
-    const { sagaName } = this.props // Usa sagaName come proprietà
+    const { sagaName } = this.props
     const URL = `http://www.omdbapi.com/?apikey=77aa006d&s=${sagaName}`
 
     fetch(URL)
@@ -101,9 +101,8 @@ class MovieGallery extends Component {
                 alt={movie.Title}
                 className="img-fluid rounded"
                 style={{
-                  transition: "transform 0.3s ease", // Effetto di transizione
+                  transition: "transform 0.3s ease",
                 }}
-                // Effetto hover direttamente inline in JSX
                 onMouseEnter={(e) => {
                   e.target.style.transform = "scale(1.1)"
                 }}

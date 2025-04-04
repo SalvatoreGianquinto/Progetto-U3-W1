@@ -4,8 +4,8 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 import MyNav from "./components/MyNav"
 import MyFooter from "./components/MyFooter"
 import HomePage from "./components/Homepage"
-import Profile from "./components/Profile"
-import Settings from "./components/Settings"
+//import Profile from "./components/Profile"
+//import Settings from "./components/Settings"
 
 function App() {
   return (
