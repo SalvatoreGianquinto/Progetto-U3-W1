@@ -95,25 +95,29 @@ class MovieGallery extends Component {
         >
           {movies.map((movie) => (
             <div key={movie.imdbID} style={{ minWidth: "200px" }}>
-              <img
-                src={
-                  movie.Poster !== "N/A" ? movie.Poster : "/default-poster.jpg"
-                }
-                alt={movie.Title}
-                className="img-fluid rounded"
-                style={{
-                  transition: "transform 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.transform = "scale(1.1)"
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = "scale(1)"
-                }}
-              />
-              <p className="text-light mt-2">
-                <strong>{movie.Title}</strong>
-              </p>
+              <Link to={`/movie-details/${movie.imdbID}`}>
+                <img
+                  src={
+                    movie.Poster !== "N/A"
+                      ? movie.Poster
+                      : "/default-poster.jpg"
+                  }
+                  alt={movie.Title}
+                  className="img-fluid rounded"
+                  style={{
+                    transition: "transform 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = "scale(1.1)"
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = "scale(1)"
+                  }}
+                />
+                <p className="text-light mt-2">
+                  <strong>{movie.Title}</strong>
+                </p>
+              </Link>
             </div>
           ))}
         </div>
