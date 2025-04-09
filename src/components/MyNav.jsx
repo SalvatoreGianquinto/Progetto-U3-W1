@@ -1,17 +1,17 @@
-// Import immagini (se sono nella cartella src/)
 import { Container, Nav, Navbar } from "react-bootstrap"
 import React from "react"
 import "bootstrap-icons/font/bootstrap-icons.css"
-// gli import dei componenti vanno inclusi nel file dove vengono adoperati!
+import { Link, useLocation } from "react-router-dom"
 
 const MyNav = function (props) {
-  // dentro props c'è la proprietà "tema"
+  const location = useLocation()
+
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
-      bg={props.tema} // "light" o "dark"
-      data-bs-theme={props.tema} // "light" o "dark"
+      bg={props.tema}
+      data-bs-theme={props.tema}
       className="navbar-expand-md"
     >
       <Container fluid>
@@ -19,8 +19,24 @@ const MyNav = function (props) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#">Tv Show</Nav.Link>
+            <Link
+              className={
+                location.pathname === "/" ? "nav-link active" : "nav-link"
+              }
+              to="/"
+            >
+              Home
+            </Link>
+            <Link
+              className={
+                location.pathname === "/tv-show"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+              to="/tv-show"
+            >
+              Tv Show
+            </Link>
             <Nav.Link href="#">Movies</Nav.Link>
             <Nav.Link href="#">Recently Added</Nav.Link>
             <Nav.Link href="#">My List</Nav.Link>

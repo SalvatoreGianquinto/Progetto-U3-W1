@@ -11,18 +11,18 @@ const EditProfile = () => {
       </div>
       <div className="container d-flex justify-content-center">
         <div className="row d-flex w-100">
-          {/* Avatar */}
+
           <div className="col-12 col-md-4 text-center text-md-end">
             <img src="/avatar.png" alt="avatar" className="w-50" />
           </div>
 
-          {/* Form */}
+
           <div className="col-12 col-md-8">
             <p className="border border-2 p-2 bg-body-secondary text-dark px-3">
               Strive Student
             </p>
 
-            {/* Dropdown Lingua */}
+
             <Dropdown>
               <Dropdown.Toggle
                 variant="light"
@@ -56,7 +56,7 @@ const EditProfile = () => {
               </span>
             </a>
 
-            {/* Autoplay Controls */}
+
             <p className="fs-3 my-3 text-light">Autoplay controls</p>
             <div className="d-flex flex-column gap-3">
               <Form.Check

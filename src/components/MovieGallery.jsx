@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Alert, Button, Spinner } from "react-bootstrap"
+import { Link } from "react-router-dom" // Aggiungi import per il Link
 import "bootstrap-icons/font/bootstrap-icons.css"
 
 class MovieGallery extends Component {
